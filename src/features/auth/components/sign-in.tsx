@@ -70,8 +70,8 @@ export const SignInCard = ({setState}:SignInCardProps) =>{
                     <FaGithub className="absolute top-2.5 left-2.5 size-5"/>
                 </Button>
                 <p className="text-xs text-muted-foreground">
-                    Dont have an account ? 
-                    <span onClick={()=>setState("signUp")} className="text-sky-700 cursor-pointer hover:underline">click here</span>
+                    Dont have an account? 
+                    <span onClick={()=>setState("signUp")} className="text-sky-700 cursor-pointer hover:underline"> Sign up</span>
                 </p>
             </CardContent>
         </Card>
