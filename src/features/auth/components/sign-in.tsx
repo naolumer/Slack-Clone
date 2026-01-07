@@ -10,11 +10,14 @@ import {Separator} from "@/components/ui/separator"
 import { FcGoogle } from "react-icons/fc"
 import { FaGithub } from "react-icons/fa"
 import { SignInFlow } from "../types"
+import { useState } from "react"
 
 interface SignInCardProps {
     setState : (state: SignInFlow) => void
 }
 export const SignInCard = ({setState}:SignInCardProps) =>{
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
     return (
         <Card className="w-full h-full p-8">
             <CardHeader className="px-0 pt-0">
@@ -32,16 +35,16 @@ export const SignInCard = ({setState}:SignInCardProps) =>{
                         disabled = {false}
                         placeholder="Email"
                         type="email"
-                        value=""
-                        onChange={()=>{}}
+                        value= {email}
+                        onChange={(e)=>setEmail(e.target.value)}
                         required
                     />
                     <Input
                         disabled = {false}
                         placeholder="Password"
                         type="password"
-                        value=""
-                        onChange={()=>{}}
+                        value={password}
+                        onChange={(e)=>setPassword(e.target.value)}
                         required
                     />
                     <Button type="submit" className="w-full" size={"lg"} disabled={false}>
